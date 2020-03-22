@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-std=c99 -Wall -Wextra -g
+CFLAGS=-std=c99 -Wall -Wextra -Wpedantic -Wshadow -O2 -g 
 
 transport: transport.c communication.o
 	${CC} -o transport transport.c communication.o ${CFLAGS}

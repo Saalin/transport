@@ -1,3 +1,5 @@
-.vscode/ipch
+.vscode
 transport
 *.o
+*_test*
+md5sum.txt

@@ -12,10 +12,10 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    FILE *file = fopen(argv[2], "w");
+    FILE *file = fopen(argv[3], "w");
     if (file == NULL)
     {
-        perror(argv[2]);
+        perror(argv[3]);
         return EXIT_FAILURE;
     }
 
@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 		perror("error");
 		return EXIT_FAILURE;
 	}
-    //downloadData(sockfd, stoi(argv[3]), stoi(argv[1]), file);
+
+    download_file(sockfd, argv[1], atoi(argv[2]), atoi(argv[4]), file);
 
     close(sockfd);
     fclose(file);
